@@ -10,7 +10,10 @@ module MethodsQuiz
 	end
 	
 	# TODO - write not_string
-	def not_string?
+	def not_string?(n)
+		if n="not"
+			not_string
+		end
 		
 	end
 	# TODO - write icy_hot?

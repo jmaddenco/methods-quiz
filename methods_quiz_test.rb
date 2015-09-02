@@ -40,4 +40,9 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal true, @m.two_as_one(30,50,20)
 	end
 
+	def test_pig_latinify
+		assert_equal "yas", @m.pig_latinigy("say")
+		assert_equal "etaiverbbA", @m.pig_latinigy("Abbreviate")
+	end
+
 end
