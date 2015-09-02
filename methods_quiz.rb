@@ -12,7 +12,7 @@ module MethodsQuiz
 	# TODO - write not_string
 	def not_string?(n)
 		if n= "not"
-			return 
+			return #dont know what goes here
 		end
 		
 	end
@@ -24,10 +24,12 @@ module MethodsQuiz
 
 	end
 	# TODO - write closer_to
-	# def closer_to
+	def closer_to(guess1, guess2)
+		if guess1<guess2 || guess2>guess1
 
-		
-	# end
+			#dont know
+		end
+	end
 	# TODO - write two_as_one?
 	def two_as_one?(d, e, f)
 		if d + e == f || e + f == d || d + f == e

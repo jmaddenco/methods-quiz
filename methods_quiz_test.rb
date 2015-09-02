@@ -29,10 +29,11 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal true, @m.icy_hot?(-11,929)
 	end
 
-	# def test_closer_to
-	# 	assert_equal closer, @m.closer_to()
+	def test_closer_to
+		assert_equal 0, @m.closer_to(0,10)
+		assert_equal 0, @m.closer_to(0,10)
 		
-	# end
+	end
 
 	def test_two_as_one?
 		assert_equal true, @m.two_as_one?(10,10,20)
