@@ -19,6 +19,7 @@ class MethodsQuizTest < MiniTest::Test
 
 	def test_not_string
 		assert_equal "not", @m.not_string?("just another day on the farm")
+		assert_equal not_string, @m.not_string?("not going to do this very well")
 		
 	end
 
