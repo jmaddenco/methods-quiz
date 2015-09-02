@@ -10,7 +10,9 @@ module MethodsQuiz
 	end
 	
 	# TODO - write not_string
-	
+	def not_string?
+		
+	end
 	# TODO - write icy_hot?
 	
 	# TODO - write closer_to
