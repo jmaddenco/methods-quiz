@@ -24,9 +24,18 @@ module MethodsQuiz
 
 	end
 	# TODO - write closer_to
+	# def closer_to
 
+		
+	# end
 	# TODO - write two_as_one?
-
+	def two_as_one?(d, e, f)
+		if d + e == f || e + f == d || d + f == e
+			true
+			
+		end
+		
+	end
 	# TODO - write pig_latinify
 
 end

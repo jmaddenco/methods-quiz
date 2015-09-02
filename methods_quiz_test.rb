@@ -35,9 +35,9 @@ class MethodsQuizTest < MiniTest::Test
 	# end
 
 	def test_two_as_one?
-		assert_equal true, @m.two_as_one(10,10,20)
-		assert_equal true, @m.two_as_one(30,10,20)
-		assert_equal true, @m.two_as_one(30,50,20)
+		assert_equal true, @m.two_as_one?(10,10,20)
+		assert_equal true, @m.two_as_one?(30,10,20)
+		assert_equal true, @m.two_as_one?(30,50,20)
 	end
 
 	# def test_pig_latinify
