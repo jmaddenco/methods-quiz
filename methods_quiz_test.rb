@@ -24,9 +24,9 @@ class MethodsQuizTest < MiniTest::Test
 	end
 
 	def test_icy_hot?
-		assert_equal true, @m.ic_hot?(10,91)
-		assert_equal true, @m.ic_hot?(0,100)
-		assert_equal true, @m.ic_hot?(1,99)
+		assert_equal true, @m.icy_hot?(-2,191)
+		assert_equal true, @m.icy_hot?(0,100)
+		assert_equal true, @m.icy_hot?(-11,929)
 	end
 
 	# def test_closer_to
@@ -40,9 +40,10 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal true, @m.two_as_one(30,50,20)
 	end
 
-	def test_pig_latinify
-		assert_equal "yas", @m.pig_latinigy("say")
-		assert_equal "etaiverbbA", @m.pig_latinigy("Abbreviate")
-	end
+	# def test_pig_latinify
+	# 	assert_equal "yas", @m.pig_latinigy("say")
+	# 	assert_equal "etaiverbbaay", @m.pig_latinigy("Abbreviate")
+	# 	assert_equal "etaiverbbaay", @m.pig_latinigy("Abbreviate")
+	# end
 
 end

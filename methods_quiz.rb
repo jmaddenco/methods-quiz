@@ -11,13 +11,18 @@ module MethodsQuiz
 	
 	# TODO - write not_string
 	def not_string?(n)
-		if n="not"
-			not_string
+		if n= "not"
+			return 
 		end
 		
 	end
 	# TODO - write icy_hot?
-	
+	def icy_hot?(atemp, btemp)
+		if atemp<=0 && btemp>=100
+			true
+		end
+
+	end
 	# TODO - write closer_to
 
 	# TODO - write two_as_one?
