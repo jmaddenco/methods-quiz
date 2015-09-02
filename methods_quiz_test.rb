@@ -29,4 +29,9 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal true, @m.ic_hot?(1,99)
 	end
 
+	def test_closer_to
+		assert_equal closer, m.closer_to
+		
+	end
+
 end
