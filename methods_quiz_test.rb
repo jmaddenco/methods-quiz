@@ -11,52 +11,41 @@ class MethodsQuizTest < MiniTest::Test
    	end.new
 	end
 
+	# TODO - write tests here
 	def test_has_teen
-		assert_equal true, @m.has_teen?(13, 5, 8)
-		assert_equal true, @m.has_teen?(1, 15, 21)
-		assert_equal true, @m.has_teen?(15, 15, 18)
-
-		assert_equal false, @m.has_teen?(5, 25, 8)
-		assert_equal false, @m.has_teen?(12, 2, 86)
+		assert_equal true, @m.has_teen?(12, 13, 20)
+		assert_equal false, @m.has_teen?(12, 3, 20)
 	end
 
-
-	def test_not_string
-		assert_equal "notbag", @m.not_string("bag")
-		assert_equal "nothing", @m.not_string("nothing")
-	end	
+	def test_not_string?
+		assert_equal "not hi", @m.not_string?("hi")
+		assert_equal "not bye", @m.not_string?("not bye")\
+	end
 
 	def test_icy_hot?
-		assert_equal true, @m.icy_hot?(102, -1)
-		assert_equal true, @m.icy_hot?(-75, 250)
-
-		assert_equal false, @m.icy_hot?(0, 100)
-		assert_equal false, @m.icy_hot?(75, 25)
-		assert_equal false, @m.icy_hot?(750, 25)
-		assert_equal false, @m.icy_hot?(75, -25)
-		assert_equal false, @m.icy_hot?(5, 258)
-
-		assert_equal false, @m.icy_hot?(-75, 70)
+		assert_equal true, @m.icy_hot?(-1, 101)
+		assert_equal false, @m.icy_hot?(0, 99)
 	end
 
-	def test_closer_to
-		assert_equal 0, @m.closer_to(0, -25, 25)	
-		assert_equal 23, @m.closer_to(0, 29, 23)	
-		assert_equal 2, @m.closer_to(0, 57, 2)	
+	def test_closer_to?
+		assert_equal 5, @m.closer_to?(3, 5, 9)
+		assert_equal 5, @m.closer_to?(3, 9, 5)
+		assert_equal 0, @m.closer_to?(5, 9, 9)
 	end
 
-	def test_two_as_one
-		assert_equal true, @m.two_as_one?(1, 2, 3)
-		assert_equal true, @m.two_as_one?(4, 2, 2)
-		assert_equal true, @m.two_as_one?(4, 6, 2)
-
-		assert_equal false, @m.two_as_one?(1, 1, 1)
-		assert_equal false, @m.two_as_one?(1, 14, 21)
-		assert_equal false, @m.two_as_one?(666, 114, 221)
+	def test_two_as_one?
+		assert_equal true, @m.two_as_one?(2, 4, 6)
+		assert_equal true, @m.two_as_one?(5, 3, 2)
+		assert_equal true, @m.two_as_one?(1, 5, 6)
+		assert_equal true, @m.two_as_one?(1, 5, 4)
+		assert_equal false, @m.two_as_one?(4, 5, 10)
 	end
-	
+
 	def test_pig_latinify
-		
+		assert_equal "appleway", @m.pig_latinify("apple")
+		assert_equal "usbay", @m.pig_latinify("bus")
+		assert_equal "usstray", @m.pig_latinify("TRUSS")
+		assert_equal "oxnardway", @m.pig_latinify(" OxnaRd  ")
 	end
 
 end
